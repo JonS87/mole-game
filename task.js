@@ -12,7 +12,14 @@ for (i = 1; i <= 9; i++) {
       lostCounter.textContent = (+lostCounter.textContent) + 1;
     }
 
-    if ((+lostCounter.textContent) === 5 || (+deadCounter.textContent) === 10) {
+    if ((+lostCounter.textContent) === 5) {
+      alert('Вы проиграли!');
+      lostCounter.textContent = 0;
+      deadCounter.textContent = 0;
+    }
+
+    if ((+deadCounter.textContent) === 10) {
+      alert ('Победа!');
       lostCounter.textContent = 0;
       deadCounter.textContent = 0;
     }
